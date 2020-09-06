@@ -1,3 +1,6 @@
+Assessment Challenge 2020-2021
+Frontend Assignment
+
 # Loginreg
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
