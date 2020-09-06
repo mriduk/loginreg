@@ -1,0 +1,33 @@
+<div class="jumbotron bg-transparent text-center">
+  <div *ngIf="!user" >
+    <h6 class="header">
+      SIGN UP
+    </h6>
+  
+      <h4 >Create Your Account</h4>
+      <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+  
+    
+      <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()"><span class="fa fa-google fa-fw"></span></button>
+      <br>
+      <button class="btn btn-social-icon btn-facebook mx-1 " (click)="signInWithFacebook()"><span class="fa fa-facebook fa-fw"></span></button>
+ 
+    
+    <h3>--------or--------</h3>
+    
+  </div>
+  <div *ngIf="user" class="card text-center">
+  
+
+    <img *ngIf="user.photoUrl" class="card-img-top img-responsive photo" src="{{ user.photoUrl }}">
+    
+      <h4 class="title">{{ user.name }}</h4>
+      <p >{{ user.email }}</p>
+      <p >Logged in with {{ user.provider }}</p>
+   
+   
+      <button class="btn btn-danger" (click)="signOut()">Sign out</button>
+
+  </div>
+</div>
+
